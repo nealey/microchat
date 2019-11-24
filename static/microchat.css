@@ -11,6 +11,10 @@ body {
 input[name="who"] {
   width: 6em;
 }
+input[name="text"] {
+  min-width: 30em;
+  width: calc(90% - 6em);
+}
 
 .when {
   color: #888;

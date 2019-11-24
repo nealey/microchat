@@ -18,7 +18,6 @@ function μchatInit(initEvent) {
     let form = event.target
     let inp = form.elements.text
     let body = new FormData(form)
-    console.log(form, body)
     fetch("say", {
       method: "POST",
       body: body,
@@ -85,6 +84,9 @@ function μchatInit(initEvent) {
         resp.json()
         .then(updateLog)
       }
+    })
+    .catch(err => {
+      toast("Server error: " + err)
     })
   }
 
